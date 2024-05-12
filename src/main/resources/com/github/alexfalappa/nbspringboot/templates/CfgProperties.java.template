@@ -1,0 +1,19 @@
+<#assign licenseFirst = "/*">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#include "${project.licensePath}">
+
+<#if package?? && package != "">
+package ${package};
+
+</#if>
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+/**
+ *
+ * @author ${user}
+ */
+@ConfigurationProperties(prefix = "prefix")
+public class ${name} {
+
+}

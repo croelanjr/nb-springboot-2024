@@ -1,0 +1,26 @@
+<#assign licenseFirst = "/*">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#include "${project.licensePath}">
+
+<#if package?? && package != "">
+package ${package};
+
+</#if>
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+/**
+ *
+ * @author ${user}
+ */
+@Component
+public class ${name} implements ApplicationRunner {
+
+    @Override
+    public void run(ApplicationArguments aa) throws Exception {
+        
+    }
+
+}
